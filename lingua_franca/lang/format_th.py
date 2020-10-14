@@ -165,7 +165,7 @@ def pronounce_number_th(num, places=2, short_scale=True, scientific=False,
         # exception used to catch any unforseen edge cases
         # will default back to normal subroutine
         except Exception as e:
-            print('ERROR: Exception in pronounce_number_en: {}' + repr(e))
+            print('ERROR: Exception in pronounce_number_th: {}' + repr(e))
 
     # check for a direct match
     if num in number_names and not ordinals:
@@ -287,7 +287,7 @@ def pronounce_number_th(num, places=2, short_scale=True, scientific=False,
 
     # deal with scientific notation unpronounceable as number
     if not result and "e" in str(num):
-        return pronounce_number_en(num, places, short_scale, scientific=True)
+        return pronounce_number_th(num, places, short_scale, scientific=True)
     # Deal with fractional part
     elif not num == int(num) and places > 0:
         if abs(num) < 1.0 and (result == "minus " or not result):
