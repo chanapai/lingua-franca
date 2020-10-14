@@ -16,7 +16,7 @@
 from collections import OrderedDict
 
 
-_ARTICLES_EN = {'a', 'an', 'the'}
+_ARTICLES_TH = {'a', 'an', 'the'}
 
 
 _NUM_STRING_TH = {
