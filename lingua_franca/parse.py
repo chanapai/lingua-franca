@@ -22,6 +22,7 @@ from lingua_franca.lang.parse_pt import *
 from lingua_franca.lang.parse_es import *
 from lingua_franca.lang.parse_it import *
 from lingua_franca.lang.parse_sv import *
+from lingua_franca.lang.parse_th import *
 
 from lingua_franca.lang.parse_de import extractnumber_de
 from lingua_franca.lang.parse_de import extract_numbers_de
@@ -114,9 +115,11 @@ def extract_numbers(text, short_scale=True, ordinals=False, lang=None):
         return extract_numbers_es(text, short_scale, ordinals)
     elif lang_code == "cs":
         return extract_numbers_cs(text, short_scale, ordinals)
+    elif lang_code == "th":
+        return extract_numbers_th(text, short_scale, ordinals)
     # TODO: extractnumbers_xx for other languages
     _log_unsupported_language(lang_code,
-                              ['en', 'it', 'fr', 'de', 'da','cs'])
+                              ['en', 'it', 'fr', 'de', 'da','cs','th'])
     return []
 
 
@@ -162,10 +165,13 @@ def extract_number(text, short_scale=True, ordinals=False, lang=None):
     elif lang_code == "cs":
         return extractnumber_cs(text, short_scale=short_scale,
                                 ordinals=ordinals)
+    elif lang_code == "th":
+        return extractnumber_th(text, short_scale=short_scale,
+                                ordinals=ordinals)
     # TODO: extractnumber_xx for other languages
     _log_unsupported_language(lang_code,
                               ['en', 'es', 'pt', 'it', 'fr',
-                               'sv', 'de', 'da', 'nl','cs'])
+                               'sv', 'de', 'da', 'nl','cs','th'])
     return text
 
 
@@ -203,9 +209,11 @@ def extract_duration(text, lang=None):
         return extract_duration_cs(text)
     if lang_code == "de":
         return extract_duration_de(text)
+    if lang_code == "th":
+        return extract_duration_th(text)
 
     # TODO: extract_duration for other languages
-    _log_unsupported_language(lang_code, ['en','cs', 'de'])
+    _log_unsupported_language(lang_code, ['en','cs', 'de','th'])
     return None
 
 
@@ -286,10 +294,12 @@ def extract_datetime(text, anchorDate=None, lang=None, default_time=None):
         return extract_datetime_nl(text, anchorDate, default_time)
     elif lang_code == "cs":
         return extract_datetime_cs(text, anchorDate, default_time)
+    elif lang_code == "th":
+        return extract_datetime_th(text, anchorDate, default_time)
 
     # TODO: extract_datetime for other languages
     _log_unsupported_language(lang_code,
-                              ['en', 'es', 'pt', 'it', 'fr', 'sv', 'de', 'da','cs'])
+                              ['en', 'es', 'pt', 'it', 'fr', 'sv', 'de', 'da','cs','th'])
     return text
 
 
@@ -331,10 +341,12 @@ def normalize(text, lang=None, remove_articles=True):
         return normalize_nl(text, remove_articles)
     elif lang_code == "cs":
         return normalize_cs(text, remove_articles)
+    elif lang_code == "th":
+        return normalize_th(text, remove_articles)
     # TODO: Normalization for other languages
     _log_unsupported_language(lang_code,
                               ['en', 'es', 'pt', 'it', 'fr',
-                               'sv', 'de', 'da', 'nl','cs'])
+                               'sv', 'de', 'da', 'nl','cs','th'])
     return text
 
 
