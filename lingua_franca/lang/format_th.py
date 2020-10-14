@@ -97,19 +97,19 @@ def pronounce_number_th(num, places=2, short_scale=True, scientific=False,
                 # handling since each call disables the scientific flag
                 return '{}{} times ten to the {}{} power'.format(
                     'negative ' if float(n) < 0 else '',
-                    pronounce_number_en(
+                    pronounce_number_th(
                         abs(float(n)), places, short_scale, False, ordinals=False),
                     'negative ' if power < 0 else '',
-                    pronounce_number_en(abs(power), places, short_scale, False, ordinals=True))
+                    pronounce_number_th(abs(power), places, short_scale, False, ordinals=True))
             else:
                 # This handles negatives of powers separately from the normal
                 # handling since each call disables the scientific flag
                 return '{}{} times ten to the power of {}{}'.format(
                     'negative ' if float(n) < 0 else '',
-                    pronounce_number_en(
+                    pronounce_number_th(
                         abs(float(n)), places, short_scale, False),
                     'negative ' if power < 0 else '',
-                    pronounce_number_en(abs(power), places, short_scale, False))
+                    pronounce_number_th(abs(power), places, short_scale, False))
 
     if short_scale:
         number_names = _NUM_STRING_TH.copy()
