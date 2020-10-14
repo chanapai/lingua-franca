@@ -758,7 +758,7 @@ def extract_datetime_th(string, dateNow, default_time):
         elif wordNext in year_multiples:
             multiplier = None
             if is_numeric(word):
-                multiplier = extractnumber_en(word)
+                multiplier = extractnumber_th(word)
             multiplier = multiplier or 1
             multiplier = int(multiplier)
             used += 2
@@ -1448,7 +1448,7 @@ def extract_datetime_th(string, dateNow, default_time):
     return [extractedDate, resultStr]
 
 
-def isFractional_en(input_str, short_scale=True):
+def isFractional_th(input_str, short_scale=True):
     """
     This function takes the given text and checks if it is a fraction.
 
@@ -1477,7 +1477,7 @@ def isFractional_en(input_str, short_scale=True):
     return False
 
 
-def extract_numbers_en(text, short_scale=True, ordinals=False):
+def extract_numbers_th(text, short_scale=True, ordinals=False):
     """
         Takes in a string and extracts a list of numbers.
 
@@ -1496,11 +1496,11 @@ def extract_numbers_en(text, short_scale=True, ordinals=False):
     return [float(result.value) for result in results]
 
 
-class EnglishNormalizer(Normalizer):
-    with open(resolve_resource_file("text/en-us/normalize.json")) as f:
+class ThaiNormalizer(Normalizer):
+    with open(resolve_resource_file("text/th-th/normalize.json")) as f:
         _default_config = json.load(f)
 
 
 def normalize_th(text, remove_articles):
     """ English string normalization """
-    return EnglishNormalizer().normalize(text, remove_articles)
+    return ThaiNormalizer().normalize(text, remove_articles)
