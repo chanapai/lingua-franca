@@ -248,7 +248,7 @@ def pronounce_number_th(num, places=2, short_scale=True, scientific=False,
             for i, z in enumerate(_split_by(n, 1000000)):
                 if not z:
                     continue
-                number = pronounce_number_en(z, places, True, scientific,
+                number = pronounce_number_th(z, places, True, scientific,
                                              ordinals=ordi and not i)
                 # strip off the comma after the thousand
                 if i:
