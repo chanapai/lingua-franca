@@ -28,7 +28,7 @@ from lingua_franca import resolve_resource_file
 from lingua_franca.time import now_local
 
 
-def generate_plurals_en(originals):
+def generate_plurals_th(originals):
     """
     Return a new set or dict containing the plural form of the original values,
 
@@ -622,11 +622,11 @@ def extract_duration_th(text):
     pattern = r"(?P<value>\d+(?:\.?\d+)?)(?:\s+|\-){unit}s?"
     text = _convert_words_to_numbers_th(text)
 
-    for unit_en in time_units:
-        unit_pattern = pattern.format(unit=unit_en[:-1])   # remove 's' from unit
+    for unit_th in time_units:
+        unit_pattern = pattern.format(unit=unit_th[:-1])   # remove 's' from unit
 
         def repl(match):
-            time_units[unit_en] += float(match.group(1))
+            time_units[unit_th] += float(match.group(1))
             return ''
         text = re.sub(unit_pattern, repl, text)
 
