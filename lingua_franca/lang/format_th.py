@@ -65,7 +65,7 @@ def nice_number_th(number, speech, denominators=range(1, 21)):
     return return_string
 
 
-def pronounce_number_en(num, places=2, short_scale=True, scientific=False,
+def pronounce_number_th(num, places=2, short_scale=True, scientific=False,
                         ordinals=False):
     """
     Convert a number to it's spoken equivalent
@@ -300,7 +300,7 @@ def pronounce_number_en(num, places=2, short_scale=True, scientific=False,
     return result
 
 
-def nice_time_en(dt, speech=True, use_24hour=False, use_ampm=False):
+def nice_time_th(dt, speech=True, use_24hour=False, use_ampm=False):
     """
     Format a time to a comfortable human format
     For example, generate 'five thirty' for speech or '5:30' for
