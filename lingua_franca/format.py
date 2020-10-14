@@ -43,9 +43,6 @@ from lingua_franca.lang.format_da import pronounce_number_da
 from lingua_franca.lang.format_cs import nice_number_cs
 from lingua_franca.lang.format_cs import nice_time_cs
 from lingua_franca.lang.format_cs import pronounce_number_cs
-from lingua_franca.lang.format_th import nice_number_th
-from lingua_franca.lang.format_th import nice_time_th
-from lingua_franca.lang.format_th import pronounce_number_th
 
 from lingua_franca.bracket_expansion import SentenceTreeParser
 from lingua_franca import _log_unsupported_language
