@@ -16,7 +16,7 @@
 from collections import OrderedDict
 
 
-_ARTICLES_TH = {'a', 'an', 'the'}
+#_ARTICLES_TH = {'a', 'an', 'the'}
 
 
 _NUM_STRING_TH = {
@@ -52,32 +52,34 @@ _NUM_STRING_TH = {
 
 
 _FRACTION_STRING_TH = {
-    2: 'half',
-    3: 'third',
-    4: 'forth',
-    5: 'fifth',
-    6: 'sixth',
-    7: 'seventh',
-    8: 'eigth',
-    9: 'ninth',
-    10: 'tenth',
-    11: 'eleventh',
-    12: 'twelveth',
-    13: 'thirteenth',
-    14: 'fourteenth',
-    15: 'fifteenth',
-    16: 'sixteenth',
-    17: 'seventeenth',
-    18: 'eighteenth',
-    19: 'nineteenth',
-    20: 'twentyith'
+    2: 'สอง',
+    3: 'สาม',
+    4: 'สี่',
+    5: 'ห้า',
+    6: 'หก',
+    7: 'เจ็ด',
+    8: 'แปด',
+    9: 'เก้า',
+    10: 'สิบ',
+    11: 'สิบเอ็ด',
+    12: 'สิบสอง',
+    13: 'สิบสาม',
+    14: 'สิบสี่',
+    15: 'สิบห้า',
+    16: 'สิบหก',
+    17: 'สิบเจ็ด',
+    18: 'สิบแปด',
+    19: 'สิบเก้า',
+    20: 'ยี่สิบ'
 }
 
 
 _LONG_SCALE_TH = OrderedDict([
-    (100, 'hundred'),
-    (1000, 'thousand'),
-    (1000000, 'million'),
+    (100, 'ร้อย'),
+    (1000, 'พัน'),
+    (10000, 'หมื่น'),
+    (100000, 'แสน'),
+    (1000000, 'ล้าน'),
     (1e12, "billion"),
     (1e18, 'trillion'),
     (1e24, "quadrillion"),
@@ -105,9 +107,11 @@ _LONG_SCALE_TH = OrderedDict([
 
 
 _SHORT_SCALE_TH = OrderedDict([
-    (100, 'hundred'),
-    (1000, 'thousand'),
-    (1000000, 'million'),
+    (100, 'ร้อย'),
+    (1000, 'พัน'),
+    (10000, 'หมื่น'),
+    (100000, 'แสน'),
+    (1000000, 'ล้าน'),
     (1e9, "billion"),
     (1e12, 'trillion'),
     (1e15, "quadrillion"),
